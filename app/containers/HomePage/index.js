@@ -11,13 +11,12 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import { Button } from 'antd';
 
-import injectReducer from 'utils/injectReducer';
-import injectSaga from 'utils/injectSaga';
-import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
-import H2 from 'components/H2';
-import ReposList from 'components/ReposList';
+import injectReducer from '../../utils/injectReducer';
+import injectSaga from '../../utils/injectSaga';
+import { makeSelectRepos, makeSelectLoading, makeSelectError } from '../../containers/App/selectors';
+import H2 from '../../components/H2';
+import ReposList from '../../components/ReposList';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
@@ -29,8 +28,6 @@ import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
-
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -53,8 +50,8 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     return (
       <article>
         <Helmet>
-          <title>Home Page</title>
-          <meta name="description" content="A React.js Boilerplate application homepage" />
+          <title>Hello</title>
+          <meta name="description" content="Playground React Frontend Homepage" />
         </Helmet>
         <div>
           <CenteredSection>
@@ -75,7 +72,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
                 <AtPrefix>
                   <FormattedMessage {...messages.trymeAtPrefix} />
                 </AtPrefix>
-                <Button type="primary">Test test</Button>
                 <Input
                   id="username"
                   type="text"
