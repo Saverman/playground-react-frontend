@@ -18,7 +18,6 @@ import { makeSelectRepos, makeSelectLoading, makeSelectError } from '../../conta
 import H2 from '../../components/H2';
 import ReposList from '../../components/ReposList';
 import AtPrefix from './AtPrefix';
-import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
@@ -54,14 +53,12 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <meta name="description" content="Playground React Frontend Homepage" />
         </Helmet>
         <div>
-          <CenteredSection>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
-          </CenteredSection>
+          <H2>
+            <FormattedMessage {...messages.startProjectHeader} />
+          </H2>
+          <p>
+            <FormattedMessage {...messages.startProjectMessage} />
+          </p>
           <Section>
             <H2>
               <FormattedMessage {...messages.trymeHeader} />
