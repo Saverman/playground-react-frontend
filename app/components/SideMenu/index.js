@@ -13,7 +13,6 @@ const MenuItemGroup = Menu.ItemGroup;
 
 class SideMenu extends React.Component { // eslint-disable-line react/prefer-stateless-function
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });

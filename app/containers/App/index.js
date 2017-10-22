@@ -2,6 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
+import {
+  Layout,
+  Row,
+  Col,
+} from 'antd';
 
 // Loadables
 import HomePage from '../../containers/HomePage/Loadable';
@@ -11,11 +16,6 @@ import NotFoundPage from '../../containers/NotFoundPage/Loadable';
 // Components
 import Header from '../../components/Header';
 import SideMenu from '../../components/SideMenu';
-import {
-  Layout,
-  Row,
-  Col,
-} from 'antd';
 
 import '../../global.less';
 
