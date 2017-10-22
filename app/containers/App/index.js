@@ -17,12 +17,35 @@ import {
   Col,
 } from 'antd';
 
-import '../../global.css';
+import '../../global.less';
 
 const AppWrapper = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: column;
+`;
+
+const SideBarWrapper = styled.div`
+  position: absolute;
+  background-color: #37474F;
+  height: 100%;
+  position: fixed;
+  border-right: 2px solid;
+`;
+
+const ContentWrapper = styled.div`
+  position: absolute;
+  width: 97%;
+  right: 0;
+  background-color: white;
+  margin-top: 15px;
+  z-index: 1;
+`;
+
+const MainWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  heigth: 100%;
 `;
 
 export default function App() {
@@ -36,18 +59,24 @@ export default function App() {
       </Helmet>
       <Header />
       <Layout>
-        <Row>
-          <Col span={4}>
-            <SideMenu />
-          </Col>
-          <Col span={20}>
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/features" component={FeaturePage} />
-              <Route path="" component={NotFoundPage} />
-            </Switch>
-          </Col>
-        </Row>
+        <MainWrapper>
+          <Row>
+            <Col span={4}>
+              <SideBarWrapper>
+                <SideMenu />
+              </SideBarWrapper>
+            </Col>
+            <Col span={20}>
+              <ContentWrapper>
+                <Switch>
+                  <Route exact path="/" component={HomePage} />
+                  <Route path="/features" component={FeaturePage} />
+                  <Route path="" component={NotFoundPage} />
+                </Switch>
+              </ContentWrapper>
+            </Col>
+          </Row>
+        </MainWrapper>
       </Layout>
     </AppWrapper>
   );

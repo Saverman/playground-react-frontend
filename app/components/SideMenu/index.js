@@ -21,13 +21,17 @@ class SideMenu extends React.Component { // eslint-disable-line react/prefer-sta
   render() {
     return (
       <div>
-        <Menu onClick={this.handleClick} style={{ width: 240 }} mode="vertical">
+        <Menu
+          onClick={this.handleClick}
+          style={{ width: 240 }}
+          mode="inline"
+        >
           <SubMenu key="sub1" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
-            <MenuItemGroup title="Item 1">
+            <MenuItemGroup key="g1" title="Item 1">
               <Menu.Item key="1">Option 1</Menu.Item>
               <Menu.Item key="2">Option 2</Menu.Item>
             </MenuItemGroup>
-            <MenuItemGroup title="Iteom 2">
+            <MenuItemGroup key="g2" title="Item 2">
               <Menu.Item key="3">Option 3</Menu.Item>
               <Menu.Item key="4">Option 4</Menu.Item>
             </MenuItemGroup>
